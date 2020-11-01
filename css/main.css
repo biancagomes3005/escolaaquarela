@@ -2246,7 +2246,7 @@ HEADER
 
 .header_logo_part.with_border .logo>img {
     margin: 2px;
-    padding: 7px 25px;
+    /* padding: 7px 25px; */
     border: 5px solid rgba(255, 255, 255, 0.4);
     border-radius: 2px;
 }
@@ -2766,6 +2766,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .logo-in-menu .header_nav_part {
     width: 100%;
+    padding: 1px 30px;
 }
 
 .header_nav_part.mobile_nav .main-nav-container .sub-menu .menu-item:not(.back)>a {
