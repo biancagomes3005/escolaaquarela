@@ -378,15 +378,15 @@
     
             let serie = '';
     
-            if (anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) {
+            if ((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
                 serie = 'Berçário';
-            } else if (anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) {
+            } else if ((anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 3 && mesNascimento >= 4)) {
                 serie = 'Grupo 2';
-            } else if (anoMatricula - anoNascimento <= 3 && mesNascimento <= 3) {
+            } else if ((anoMatricula - anoNascimento <= 3 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 4 && mesNascimento >= 4)) {
                 serie = 'Grupo 3';
-            } else if (anoMatricula - anoNascimento <= 4 && mesNascimento <= 3) {
+            } else if ((anoMatricula - anoNascimento <= 4 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 5 && mesNascimento >= 4)) {
                 serie = 'Grupo 4';
-            } else if (anoMatricula - anoNascimento <= 5 && mesNascimento <= 3) {
+            } else if ((anoMatricula - anoNascimento <= 5 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 6 && mesNascimento >= 4)) {
                 serie = 'Grupo 5';
             } else {
                 serie = 'Fora da Faixa Etária';
