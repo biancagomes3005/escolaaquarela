@@ -206,6 +206,16 @@
                                             <p>
                                                 Incluir uma tabela de idade x Serie, baseado em quando nasceu.
                                             </p>
+                                            <p>Descubra a série</p>
+                                            <label for="anoMatricula">Ano de Matrícula:</label>
+                                            <input type="number" id="anoMatricula" placeholder="Ano de Matrícula">
+
+                                            <label for="dataNascimento">Data de Nascimento:</label>
+                                            <input type="date" id="dataNascimento">
+
+                                            <button onclick="calcularSerie()">Calcular Série</button>
+
+                                            <p id="resultado"></p>
                                         </div>
                                         <div class='separator-box'>
                                             <canvas class='separator' width='1170' data-line-color='#f9e8b2'></canvas>
@@ -357,78 +367,6 @@
                                         </div>
                                     </article>
                                     <!-- / blog item -->
-                                    <!-- blog item -->
-                                    <article class='item medium'>
-                                        <div class='post_content_wrap'>
-                                            <div class='media_info_wrapper'>
-                                                <div class="media_part only_link">
-                                                    <div class='link'><a href='http://cwsthemes.com/'>http://cwsthemes.com</a></div>
-                                                </div>
-                                            </div>
-                                            <div class='post_content'>
-                                                <p>Quisque in nulla ut metus cursus commodo non vitae nibh. Curabitur euismod sem vel velit blandit, sit amet molestie sapien pulvinar. Aenean molestie faucibus fringilla. Nam at justo eget nulla dictum vehicula. Nulla ac mi adipiscing, elementum ligula at, ultrices mauris. Nullam nec tortor mauris. Quisque sollicitudin metus quis tempor congue. Mauris sit amet tincidunt purus, id eleifend orci. Maecenas vel elit at dui condimentum lobortis in sed eros. Morbi iaculis euismod felis in pulvinar. Praesent sagittis elementum velit nec dictum.</p>
-                                                <p>Donec bibendum varius ipsum, ac pretium metus vehicula eu. Suspendisse vestibulum velit non ornare elementum. Mauris ultrices posuere diam sit amet consectetur. Quisque eget elit quis sapien interdum mattis. Aenean commodo pharetra mauris a fermentum. Sed mattis sit amet risus a feugiat. <a href="blog-post.html" class="more-link">[&#8230;]</a></p>
-                                            </div>
-                                        </div>
-                                        <div class='separator-box'>
-                                            <canvas class='separator' width='1170' data-line-color='#f9e8b2'></canvas>
-                                        </div>
-                                    </article>
-                                    <!-- / blog item -->
-                                    <!-- blog item -->
-                                    <article class='item medium'>
-                                        <div class='post_header_def_post'>
-                                            <div class="date">
-                                                <div class='date-cont'><span class='day'>22</span><span class='month' title='February'><span>Feb</span></span><span class='year'>2015</span><i class='springs'></i></div>
-                                            </div>
-                                            <div class="post_info_header">
-                                                <h3 class="ce_title"><a href="blog-post.html">Audio post</a></h3> </div>
-                                        </div>
-                                        <div class='media_info_wrapper'>
-                                            <div class="media_part audio_post">
-                                                <div class='pic'><img src='pic/bfi_thumb/548x308-kid_headpnones-304vqn51i7h5iwjjqop72i.jpg' data-at2x='pic/bfi_thumb/548x308-kid_headpnones-304vqn51i7h5iwjjqop72i@2x.jpg' alt /></div>
-                                                <div class='audio'>
-                                                    <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-                                                    <audio class="audio-shortcode" id="audio-1793-1" preload="none" controls="controls">
-                                                        <source type="audio/mpeg" src="http://html.cwsthemes.com/wp-content/uploads/2015/04/Show-Me-A-Dinosaur-Drawing-The-Line.mp3?_=1" /><a href="http://html.cwsthemes.com/wp-content/uploads/2015/04/Show-Me-A-Dinosaur-Drawing-The-Line.mp3">/wp-content/uploads/2015/04/Show-Me-A-Dinosaur-Drawing-The-Line.mp3</a></audio>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='post_content_wrap'>
-                                            <div class='post_content'>
-                                                <p>Quisque in nulla ut metus cursus commodo non vitae nibh. Curabitur euismod sem vel velit blandit, sit amet molestie sapien pulvinar. Aenean molestie faucibus fringilla. Nam at justo eget nulla dictum vehicula. Nulla ac mi adipiscing, elementum ligula at, ultrices mauris. Nullam nec tortor mauris. </p>
-                                                <p>Quisque sollicitudin metus quis tempor congue. Mauris sit amet tincidunt purus, id eleifend orci. Maecenas vel elit at dui condimentum lobortis in sed eros. Morbi iaculis euismod felis in pulvinar. Praesent sagittis elementum velit nec dictum. Donec bibendum varius ipsum, ac pretium metus vehicula eu. Suspendisse vestibulum velit non ornare elementum. Mauris ultrices posuere diam sit amet consectetur. Quisque eget elit quis sapien interdum mattis. <a href="blog-post.html" class="more-link">[&#8230;]</a></p>
-                                            </div>
-                                        </div>
-                                        <div class='separator-box'>
-                                            <canvas class='separator' width='1170' data-line-color='#f9e8b2'></canvas>
-                                        </div>
-                                    </article>
-                                    <!-- / blog item -->
-                                    <!-- blog item -->
-                                    <article class='item medium'>
-                                        <div class='media_info_wrapper'>
-                                            <div class="media_part quoute_post">
-                                                <div class="testimonial clearfix without_image">
-                                                    <div class='quote'>Art is the only serious thing in the world. And the artist is the only person who is never serious.</div>
-                                                    <figure class='author'>
-                                                        <div class='dott'><span>.</span><span>.</span><span>.</span></div>
-                                                        <figcaption>Oscar Wilde</figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='post_content_wrap'>
-                                            <div class='post_content'>
-                                                <p>Quisque in nulla ut metus cursus commodo non vitae nibh. Curabitur euismod sem vel velit blandit, sit amet molestie sapien pulvinar. Aenean molestie faucibus fringilla. </p>
-                                                <p>Nam at justo eget nulla dictum vehicula. Nulla ac mi adipiscing, elementum ligula at, ultrices mauris. Nullam nec tortor mauris. Quisque sollicitudin metus quis tempor congue. Mauris sit amet tincidunt purus, id eleifend orci. Maecenas vel elit at dui condimentum lobortis in sed eros. Morbi iaculis euismod felis in pulvinar. Praesent sagittis elementum velit nec dictum. Donec bibendum varius ipsum, ac pretium metus vehicula eu. Suspendisse vestibulum velit non ornare elementum. Mauris ultrices posuere diam sit amet consectetur. Quisque eget elit quis sapien interdum mattis. Aenean commodo pharetra mauris a fermentum. Sed mattis sit amet risus a feugiat. <a href="blog-post.html" class="more-link">[&#8230;]</a></p>
-                                            </div>
-                                        </div>
-                                        <div class='separator-box'>
-                                            <canvas class='separator' width='1170' data-line-color='#f9e8b2'></canvas>
-                                        </div>
-                                    </article>
-                                    <!-- / blog item -->
                                 </div>
                             </div>
                         </section>
@@ -496,6 +434,36 @@
     <script type='text/javascript' src="js/jquery.form.min.js"></script>
     <script type='text/javascript' src='js/scripts.js'></script>
     <script type='text/javascript' src="js/jquery.tweet.js"></script>
+    <script>
+        function calcularSerie() {
+            const anoMatricula = document.getElementById('anoMatricula').value;
+            const dataNascimento = new Date(document.getElementById('dataNascimento').value);
+            const anoNascimento = dataNascimento.getFullYear();
+            const mesNascimento = dataNascimento.getMonth() + 1; // Adiciona +1 pois os meses são indexados de 0 a 11
+    
+            let serie = '';
+    
+            if (anoMatricula - anoNascimento <= 5) {
+                serie = 'Berçário';
+            } else if (anoMatricula - anoNascimento <= 6) {
+                serie = 'Maternal';
+            } else if (anoMatricula - anoNascimento <= 7) {
+                serie = 'Pré-Escola I';
+            } else if (anoMatricula - anoNascimento <= 8) {
+                serie = 'Pré-Escola II';
+            } else if (anoMatricula - anoNascimento <= 9) {
+                serie = '1º Ano';
+            } else if (anoMatricula - anoNascimento <= 10) {
+                serie = '2º Ano';
+            } else if (anoMatricula - anoNascimento <= 11) {
+                serie = '3º Ano';
+            } else {
+                serie = 'Fora da Faixa Etária';
+            }
+    
+            document.getElementById('resultado').innerText = 'Com base no ano de matrícula ${anoMatricula} e data de nascimento ${dataNascimento.toLocaleDateString()}, o aluno deve se enquadrar na série: ${serie}';
+        }
+    </script>
 </body>
 
 
