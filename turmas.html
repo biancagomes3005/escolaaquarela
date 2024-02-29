@@ -378,7 +378,7 @@
     
             let serie = '';
     
-            if (mesNascimento < 1){ // Erro na formatação da data
+            if (isNaN(dataNascimento)){ // Erro na formatação da data
                 alert("Data de Nascimento Inválida!");
                 document.getElementById('dataNascimento').value = '';
             }
