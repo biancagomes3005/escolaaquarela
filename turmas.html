@@ -386,7 +386,7 @@
             let serie = '';
     
             if (isNaN(dataNascimento)){ // Erro na formatação da data
-                document.getElementById('resultado').innerHTML = '<strong><span>Data de Nascimento Inválida!</strong></span>';
+                document.getElementById('resultado').innerHTML = '<strong style="color: orangered;"><span>Data de Nascimento Inválida!</strong></span>';
                 document.getElementById('dataNascimento').value = '';
             }
             else if((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
