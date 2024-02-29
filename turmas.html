@@ -389,7 +389,7 @@
             var anoAtual = dataAtual.getFullYear();
             if(anoMatricula < anoAtual){
                 document.getElementById('resultado').innerHTML = '<strong style="color: orangered;"><span>O ano de matricula deve ser maior ou igual a ' + anoAtual + '</strong></span>';
-                alert("O ano de matricula deve ser maior ou igual a " + anoAtual);
+                alert("O ano de matricula deve ser maior ou igual a " + anoAtual + '.');
             }
             else{
                 if (isNaN(dataNascimento)){ // Erro na formatação da data
