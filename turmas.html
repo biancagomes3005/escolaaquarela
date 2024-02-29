@@ -150,7 +150,7 @@
 
                                             <button onclick="calcularSerie()">Calcular Série</button>
                                         </br>
-                                            <p><strong><span id="resultado"></span></strong></p>
+                                            <p id="resultado"></p>
                                         </div>
                                         <div class='separator-box'>
                                             <canvas class='separator' width='1170' data-line-color='#f9e8b2'></canvas>
@@ -392,7 +392,7 @@
                 serie = 'Fora da Faixa Etária';
             }
     
-            document.getElementById('resultado').innerText = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: ' + serie;
+            document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span>' + serie + '</strong></span>';
         }
     </script>
 </body>
