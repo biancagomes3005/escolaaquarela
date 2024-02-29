@@ -151,7 +151,7 @@
                                                     <div role="form" class="cf" id="cf-f1705-o1" lang="en-US" dir="ltr" >
                                                         <!-- <div class="screen-reader-response"></div> -->
                                                         <form onsubmit="calcularSerie()" class="cf-form contact-form">
-                                                            <p><span class="cf-form-control-wrap"><label for="anoMatricula">Ano de Matrícula:</label><input name="anoMatricula" size="60" class="" aria-required="true" aria-invalid="false" type="number" id="anoMatricula" placeholder="Ano de Matrícula"/></span></p>
+                                                            <p><span class="cf-form-control-wrap"><label for="anoMatricula">Ano de Matrícula:</label><input name="anoMatricula" size="60" class="" aria-required="true" aria-invalid="false" type="number" id="anoMatricula" placeholder="20XX"/></span></p>
                                                             <p><span class="cf-form-control-wrap"> <label for="dataNascimento">Data de Nascimento:</label><input name="dataNascimento" type="date" id="dataNascimento" size="60" class="" aria-required="true" aria-invalid="false"/></span></p>
                                                             <p>
                                                                 <input type="submit" value="Calcular" class="cf-form-control cf-submit" />
@@ -384,24 +384,36 @@
             const mesNascimento = dataNascimento.getMonth() + 1; // Adiciona +1 pois os meses são indexados de 0 a 11
     
             let serie = '';
+
+            var dataAtual = new Date();
+            var anoAtual = dataAtual.getFullYear();
+            if(anoMatricula < anoAtual){
+                document.getElementById('resultado').innerHTML = '<strong style="color: orangered;"><span>O ano de matricula deve ser maior ou igual a ' + anoAtual + '</strong></span>';
+                alert("O ano de matricula deve ser maior ou igual a " + anoAtual);
+            }
+            else{
+                if (isNaN(dataNascimento)){ // Erro na formatação da data
+                    document.getElementById('resultado').innerHTML = '<strong style="color: orangered;"><span>Data de Nascimento Inválida!</strong></span>';
+                    document.getElementById('dataNascimento').value = '';
+                }
+                else {
+                    if((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
+                        serie = 'Berçário';
+                    } else if ((anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 3 && mesNascimento >= 4)) {
+                        serie = 'Grupo 2';
+                    } else if ((anoMatricula - anoNascimento <= 3 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 4 && mesNascimento >= 4)) {
+                        serie = 'Grupo 3';
+                    } else if ((anoMatricula - anoNascimento <= 4 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 5 && mesNascimento >= 4)) {
+                        serie = 'Grupo 4';
+                    } else if ((anoMatricula - anoNascimento <= 5 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 6 && mesNascimento >= 4)) {
+                        serie = 'Grupo 5';
+                    } else {
+                        serie = 'Fora da Faixa Etária';
+                    }
+                }
+            }
     
-            if (isNaN(dataNascimento)){ // Erro na formatação da data
-                document.getElementById('resultado').innerHTML = '<strong style="color: orangered;"><span>Data de Nascimento Inválida!</strong></span>';
-                document.getElementById('dataNascimento').value = '';
-            }
-            else if((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
-                serie = 'Berçário';
-            } else if ((anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 3 && mesNascimento >= 4)) {
-                serie = 'Grupo 2';
-            } else if ((anoMatricula - anoNascimento <= 3 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 4 && mesNascimento >= 4)) {
-                serie = 'Grupo 3';
-            } else if ((anoMatricula - anoNascimento <= 4 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 5 && mesNascimento >= 4)) {
-                serie = 'Grupo 4';
-            } else if ((anoMatricula - anoNascimento <= 5 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 6 && mesNascimento >= 4)) {
-                serie = 'Grupo 5';
-            } else {
-                serie = 'Fora da Faixa Etária';
-            }
+           
             
             if(serie != '')
                 document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span style="color: orangered;">' + serie + '</strong></span>';
