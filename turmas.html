@@ -206,6 +206,7 @@
                                             <p>
                                                 Incluir uma tabela de idade x Serie, baseado em quando nasceu.
                                             </p>
+                                            </br>
                                             <p>Descubra a série</p>
                                             <label for="anoMatricula">Ano de Matrícula:</label>
                                             <input type="number" id="anoMatricula" placeholder="Ano de Matrícula">
@@ -213,7 +214,7 @@
                                             <label for="dataNascimento">Data de Nascimento:</label>
                                             <input type="date" id="dataNascimento">
 
-                                            <button onclick="calcularSerie()">Calcular Série</button>
+                                            <button class="fancy fancy_gallery" onclick="calcularSerie()">Calcular Série</button>
 
                                             <p id="resultado"></p>
                                         </div>
@@ -443,25 +444,21 @@
     
             let serie = '';
     
-            if (anoMatricula - anoNascimento <= 5) {
+            if (anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) {
                 serie = 'Berçário';
-            } else if (anoMatricula - anoNascimento <= 6) {
-                serie = 'Maternal';
-            } else if (anoMatricula - anoNascimento <= 7) {
-                serie = 'Pré-Escola I';
-            } else if (anoMatricula - anoNascimento <= 8) {
-                serie = 'Pré-Escola II';
-            } else if (anoMatricula - anoNascimento <= 9) {
-                serie = '1º Ano';
-            } else if (anoMatricula - anoNascimento <= 10) {
-                serie = '2º Ano';
-            } else if (anoMatricula - anoNascimento <= 11) {
-                serie = '3º Ano';
+            } else if (anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) {
+                serie = 'Grupo 2';
+            } else if (anoMatricula - anoNascimento <= 3 && mesNascimento <= 3) {
+                serie = 'Grupo 3';
+            } else if (anoMatricula - anoNascimento <= 4 && mesNascimento <= 3) {
+                serie = 'Grupo 4';
+            } else if (anoMatricula - anoNascimento <= 5 && mesNascimento <= 3) {
+                serie = 'Grupo 5';
             } else {
                 serie = 'Fora da Faixa Etária';
             }
     
-            document.getElementById('resultado').innerText = 'Com base no ano de matrícula ${anoMatricula} e data de nascimento ${dataNascimento.toLocaleDateString()}, o aluno deve se enquadrar na série: ${serie}';
+            document.getElementById('resultado').innerText = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: ' + serie;
         }
     </script>
 </body>
