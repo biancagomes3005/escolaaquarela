@@ -157,7 +157,7 @@
                                                                 <input type="submit" value="Calcular" class="cf-form-control cf-submit" />
                                                             </p>
                                                         </form>
-                                                        <div class="email_server_responce"><p id="resultado" style="color: orangered;"></p></div>
+                                                        <div class="email_server_responce"><p id="resultado"></p></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -286,9 +286,6 @@
                                     <!-- blog item -->
                                     <article class='item medium'>
                                         <div class='post_header_def_post'>
-                                            <div class="date">
-                                                <div class='date-cont'><span class='day'>27</span><span class='month' title='February'><span>Feb</span></span><span class='year'>2015</span><i class='springs'></i></div>
-                                            </div>
                                             <div class="post_info_header">
                                                 <h3 class="ce_title"><a href="blog-post.html">Educação Infantil</a></h3> </div>
                                         </div>
@@ -407,7 +404,7 @@
             }
             
             if(serie != '')
-                document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span>' + serie + '</strong></span>';
+                document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span style="color: orangered;">' + serie + '</strong></span>';
 
         }
     </script>
