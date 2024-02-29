@@ -379,7 +379,7 @@
             let serie = '';
     
             if (isNaN(dataNascimento)){ // Erro na formatação da data
-                alert("Data de Nascimento Inválida!");
+                document.getElementById('resultado').innerHTML = '<strong><span>Data de Nascimento Inválida!</strong></span>';
                 document.getElementById('dataNascimento').value = '';
             }
             else if((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
@@ -395,8 +395,10 @@
             } else {
                 serie = 'Fora da Faixa Etária';
             }
-    
-            document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span>' + serie + '</strong></span>';
+            
+            if(serie != '')
+                document.getElementById('resultado').innerHTML = 'Com base nas informações fornecidadas, o aluno deve se enquadrar na série: <strong><span>' + serie + '</strong></span>';
+
         }
     </script>
 </body>
