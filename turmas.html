@@ -378,7 +378,11 @@
     
             let serie = '';
     
-            if ((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
+            if (mesNascimento < 1){ // Erro na formatação da data
+                alert("Data de Nascimento Inválida!");
+                document.getElementById('dataNascimento').value = '';
+            }
+            else if((anoMatricula - anoNascimento <= 1 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 2 && mesNascimento >= 4)) {
                 serie = 'Berçário';
             } else if ((anoMatricula - anoNascimento <= 2 && mesNascimento <= 3) || (anoMatricula - anoNascimento <= 3 && mesNascimento >= 4)) {
                 serie = 'Grupo 2';
